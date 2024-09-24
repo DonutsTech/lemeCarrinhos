@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$mobile: 891px;
+$desk: 890px;
+$desk-min: 1024px;
+$cor-dark: #08100C;
+$cor-dark-shawdon: rgba(8, 16, 12, 0.5);
+$cor-dark-2: #101923;
+$cor-white: #F4F1F8;
+$cor-principal-dark: #0A1C33;
+$cor-principal-dark-shawdon: rgba(10, 28, 51, 0.35);
+$cor-principal: #002C66;
+$cor-principal-clara: #99C5FF;
+$cor-2-dark: #00353E;
+$cor-2: #166370;
+$cor-2-clara: #CCF7FF;
+$family: "Kanit", sans-serif;
+$titulo-mobile: 16px;
+$texto-mobile:  12px;
+$titulo-desk: 32px;
+$texto-desk: 24px;
+
+$titulo-1: clamp(1.25rem, 0.9615rem + 1.2821vw, 2.5rem);
+$titulo-2: clamp(1.125rem, 0.8654rem + 1.1538vw, 2.25rem);
+$titulo-3: clamp(1rem, 0.7692rem + 1.0256vw, 2rem);
+
+$texto-1: clamp(0.875rem, 0.7885rem + 0.3846vw, 1.25rem);
+$texto-2: clamp(0.75rem, 0.6923rem + 0.2564vw, 1rem);
+$texto-3: clamp(0.5rem, 0.4423rem + 0.2564vw, 0.75rem);
