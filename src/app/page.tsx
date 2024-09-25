@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner";
 import Menu from "@/components/Menu";
+import Slider from "@/components/Slider";
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
       <Banner />
     </header>
     <main>
-
+      <Slider />
     </main>
     </>
   );
