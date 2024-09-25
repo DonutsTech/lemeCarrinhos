@@ -1,6 +1,7 @@
 'use client';
+import Image from 'next/image';
 import Style from './Banner.module.scss';
-import bannerVideo from '@/assets/video/videoHome.mp4';
+import logo from '@public/assets/logocomtexto.svg';
 
 
 const Banner = () => {
@@ -15,10 +16,16 @@ const Banner = () => {
         preload="auto"
         className={Style.videoBanner}
       >
-        <source src={bannerVideo} type='video/mp4'/>
+        <source src="assets/video/videoHome.mp4" type='video/mp4'/>
         Seu navegador não suporta vídeos.
       </video>
-
+    <div className={Style.overlay} />
+    <div className={Style.content}> 
+      <Image src={logo} alt='Logo da Leme Carrinhos' className={Style.logo} />
+      <p >
+      Carrinhos, cestos e acessórios que transformam seu negócio e não te deixa na mão!
+      </p>
+    </div>
     </section>
   )
 };
