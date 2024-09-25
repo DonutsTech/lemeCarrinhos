@@ -1,0 +1,24 @@
+.slick-list {
+  width: 100%;
+  height: auto;
+  cursor: grab;
+}
+
+.slick-list:active {
+  cursor: grabbing;
+}
+
+
+.slick-slide {
+  scale: 0.9;
+  transition: all 500 linear;
+  
+}
+
+.slick-current {
+  scale: 1;
+  transition: all 500 linear;
+  z-index: 2;
+
+}
+
