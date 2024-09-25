@@ -1,9 +1,9 @@
 'use client';
 import { useEffect, useState } from "react";
 import Style from "./Menu.module.scss";
-import LogoCompleta from '@/assets/logocomtexto.svg';
-import LogoSemTexto from '@/assets/logosemtexto.svg';
-import Close from '@/assets/x.svg';
+import LogoCompleta from '@public/assets/logocomtexto.svg';
+import LogoSemTexto from '@public/assets/logosemtexto.svg';
+import Close from '@public/assets/x.svg';
 import classNames from "classnames";
 import Image from "next/image";
 
