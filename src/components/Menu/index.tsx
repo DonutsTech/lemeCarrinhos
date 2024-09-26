@@ -6,6 +6,7 @@ import LogoSemTexto from '@public/assets/logosemtexto.svg';
 import Close from '@public/assets/x.svg';
 import classNames from "classnames";
 import Image from "next/image";
+import Link from "next/link";
 
 const Menu = () => {
 
@@ -30,25 +31,25 @@ const Menu = () => {
       <nav className={Style.menu_desk} >
         <ul className={Style.menu_lista_desk}>
           <li>
-            <a href='home' className={Style.menuLinkLogo}>
+            <Link href='' className={Style.menuLinkLogo}>
               <Image src={LogoCompleta} alt="logo completo" className={Style.logo} />
-            </a>
+            </Link>
           </li>
           <div className={Style.menuLink_textos}>
             <li className={Style.menuLink}>
-              <a href="">
+              <Link className={Style.menuLink} href="#about">
                 Sobre nós
-              </a>
+              </Link>
             </li>
             <li className={Style.menuLink}>
-              <a href="" >
+              <Link className={Style.menuLink} href="" >
                 Serviços
-              </a>
+              </Link>
             </li>
             <li className={Style.menuLink}>
-              <a href="">
+              <Link className={Style.menuLink} href="">
                 Contato
-              </a>
+              </Link>
             </li>
           </div>
         </ul>
@@ -88,24 +89,24 @@ const Menu = () => {
 
           <ul className={Style.menu_lista_mobile}>
             <li>
-              <a href="">
+              <Link href=''>
                 <Image src={LogoCompleta} alt="logo completo" className={Style.logo_mobile} />
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="">
+              <Link className={Style.menuLink} href="#about">
                 Sobre nós
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="">
+              <Link className={Style.menuLink} href="">
                 Serviços
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="">
+              <Link className={Style.menuLink} href="">
                 Contato
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
