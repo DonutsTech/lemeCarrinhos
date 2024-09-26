@@ -20,10 +20,14 @@ $texto-mobile:  12px;
 $titulo-desk: 32px;
 $texto-desk: 24px;
 
-$titulo-1: clamp(1.25rem, 0.9615rem + 1.2821vw, 2.5rem);
+
+
+$titulo-1: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
 $titulo-2: clamp(1.125rem, 0.8654rem + 1.1538vw, 2.25rem);
 $titulo-3: clamp(1rem, 0.7692rem + 1.0256vw, 2rem);
 
-$texto-1: clamp(0.875rem, 0.7885rem + 0.3846vw, 1.25rem);
+$texto-1: clamp(0.875rem, 0.7rem + 0.875vw, 1.75rem);
 $texto-2: clamp(0.75rem, 0.6923rem + 0.2564vw, 1rem);
 $texto-3: clamp(0.5rem, 0.4423rem + 0.2564vw, 0.75rem);
+
+$texto-4: clamp(0.875rem, 0.75rem + 0.625vw, 1.5rem);
