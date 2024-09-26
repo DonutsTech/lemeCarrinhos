@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21 15.65">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #002c66;
+      }
+
+      .cls-3 {
+        fill: url(#Gradiente_sem_nome_75-5);
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-2, .cls-9 {
+        stroke-width: 0px;
+      }
+
+      .cls-3, .cls-4, .cls-6, .cls-7, .cls-8, .cls-9 {
+        mix-blend-mode: color-dodge;
+      }
+
+      .cls-4 {
+        fill: url(#Gradiente_sem_nome_75-2);
+      }
+
+      .cls-5 {
+        fill: #ccf7ff;
+      }
+
+      .cls-10 {
+        isolation: isolate;
+      }
+
+      .cls-6 {
+        fill: url(#Gradiente_sem_nome_75);
+      }
+
+      .cls-7 {
+        fill: url(#Gradiente_sem_nome_75-3);
+      }
+
+      .cls-8 {
+        fill: url(#Gradiente_sem_nome_75-4);
+      }
+
+      .cls-11 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-9 {
+        fill: url(#Gradiente_sem_nome_75-6);
+      }
+    </style>
+    <clipPath id="clippath">
+      <polygon class="cls-2" points="20.3 5.8 10.51 15.18 .71 5.82 .71 5.82 5.6 .84 15.39 .83 20.29 5.8 20.3 5.8"/>
+    </clipPath>
+    <radialGradient id="Gradiente_sem_nome_75" data-name="Gradiente sem nome 75" cx="3324.33" cy="-498.56" fx="3324.33" fy="-498.56" r="4.99" gradientTransform="translate(1835.52 2776.26) rotate(-123.39) scale(1 0) skewX(-.03)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#000"/>
+    </radialGradient>
+    <radialGradient id="Gradiente_sem_nome_75-2" data-name="Gradiente sem nome 75" cx="2599.26" cy="592.07" fx="2599.26" fy="592.07" r="4.99" gradientTransform="translate(2576.83 371.69) rotate(-171.89) scale(1 0) skewX(-.03)" xlink:href="#Gradiente_sem_nome_75"/>
+    <radialGradient id="Gradiente_sem_nome_75-3" data-name="Gradiente sem nome 75" cx="3286.74" cy="-493.57" fx="3286.74" fy="-493.57" r="5.98" gradientTransform="translate(-3173.99 820.65) rotate(-14.28) scale(1 0) skewX(-.03)" xlink:href="#Gradiente_sem_nome_75"/>
+    <radialGradient id="Gradiente_sem_nome_75-4" data-name="Gradiente sem nome 75" cx="2561.26" cy="587.42" fx="2561.26" fy="587.42" r="5.98" gradientTransform="translate(-1163.67 2283.81) rotate(-62.79) scale(1 0) skewX(-.03)" xlink:href="#Gradiente_sem_nome_75"/>
+    <radialGradient id="Gradiente_sem_nome_75-5" data-name="Gradiente sem nome 75" cx="3337.74" cy="-498.64" fx="3337.74" fy="-498.64" r="4.41" gradientTransform="translate(1839.8 2789.64) rotate(-123.39) scale(1 0) skewX(-.03)" xlink:href="#Gradiente_sem_nome_75"/>
+    <radialGradient id="Gradiente_sem_nome_75-6" data-name="Gradiente sem nome 75" cx="2608.31" cy="594.85" fx="2608.31" fy="594.85" r="4.41" gradientTransform="translate(2582.68 375.16) rotate(-171.89) scale(1 0) skewX(-.03)" xlink:href="#Gradiente_sem_nome_75"/>
+  </defs>
+  <g class="cls-10">
+    <g id="Camada_2" data-name="Camada 2">
+      <g id="Camada_1-2" data-name="Camada 1">
+        <g>
+          <g>
+            <polygon class="cls-1" points="20.3 5.8 10.51 15.18 .71 5.82 .71 5.82 5.6 .84 15.39 .83 20.29 5.8 20.3 5.8"/>
+            <g class="cls-11">
+              <rect class="cls-5" x="0" y="5.64" width="21" height=".34"/>
+              <polygon class="cls-5" points="10.51 15.65 5.44 .89 5.76 .78 10.5 14.6 15.23 .77 15.55 .88 10.51 15.65"/>
+              <polygon class="cls-5" points="13.55 5.87 10.47 .67 7.44 5.88 7.15 5.71 10.47 0 13.84 5.7 13.55 5.87"/>
+            </g>
+          </g>
+          <g>
+            <path class="cls-6" d="M6.17,3.61c-.48-.71-.81-1.38-.8-1.38s.51.55.98,1.25.81,1.38.8,1.38-.51-.55-.98-1.25Z"/>
+            <path class="cls-4" d="M6.2,3.82c-.85-.11-1.56-.31-1.56-.32s.75-.02,1.59.09,1.56.31,1.56.32-.75.02-1.59-.09Z"/>
+          </g>
+          <g>
+            <path class="cls-7" d="M8.35,9.07c.99-.26,1.87-.37,1.87-.36s-.82.36-1.8.62-1.87.37-1.87.36.82-.36,1.8-.62Z"/>
+            <path class="cls-8" d="M8.11,9.03c.46-.91.96-1.65.97-1.64s-.27.85-.73,1.76-.96,1.65-.97,1.64.27-.85.73-1.76Z"/>
+          </g>
+          <g>
+            <path class="cls-3" d="M3.09,5.8c-.42-.62-.71-1.22-.71-1.22s.45.48.87,1.11.71,1.22.71,1.22-.45-.48-.87-1.11Z"/>
+            <path class="cls-9" d="M3.12,5.99c-.75-.1-1.38-.27-1.38-.28s.66-.01,1.41.08,1.38.27,1.38.28-.66.01-1.41-.08Z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
