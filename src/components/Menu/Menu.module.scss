@@ -51,7 +51,7 @@
 
         .menuLink {
 
-          a {
+          .menuLink {
             text-decoration: none;
             color: $cor-white;
             padding: 16px;
@@ -163,7 +163,7 @@
             height: 48px;
           }
 
-          a {
+          .menuLink {
             text-decoration: none;
             color: $cor-white;
             font-family: $family;
