@@ -1,0 +1,109 @@
+'use client';
+
+import { IProduto } from '@/types/produto';
+import Image from 'next/image';
+
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
+import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
+
+import Style from './Arcodeon.module.scss';
+import './swiper.scss';
+import { useState } from 'react';
+import classNames from 'classnames';
+
+
+interface Props {
+  prop: Array<IProduto>;
+
+}
+
+const Arcodeon = ({ prop }: Props) => {
+  const [thumbsSwiper, setThumbsSwiper] = useState<string | SwiperClass | null | undefined>(null);
+
+
+  return (
+    <div className={Style.acordeon}>
+      <Swiper
+        spaceBetween={10}
+        navigation={false}
+        thumbs={{ swiper: thumbsSwiper }}
+        modules={[FreeMode, Navigation, Thumbs]}
+        className={Style.mySwiper}
+      >
+
+        {
+          prop.map((elemento, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <div className={Style.acordeonSlide}>
+                  <Image src={elemento.imagem} width={280} height={280} alt='Imagem do serviço' className={Style.imagem} />
+                  <div className={Style.boxTextos}>
+                    <h3>{elemento.titulo}</h3>
+                    <p>
+                      {elemento.texto}
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            )
+          })
+        }
+      </Swiper>
+      <Swiper
+        onSwiper={setThumbsSwiper}
+        spaceBetween={10}
+        slidesPerView={prop.length}
+        freeMode={true}
+        watchSlidesProgress={true}
+        modules={[FreeMode, Navigation, Thumbs]}
+        className={classNames({
+          [Style.indexed]: true,
+          ['indice']: true,
+        })}
+      >
+        {
+          prop.map((elemento, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <div
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    cursor: "pointer",
+                  }}
+                  className={classNames({
+                    [Style.acordeonSlide]: true,
+                    ['indiceBox']: true,
+                  })}>
+                  <Image src={elemento.imagem}
+                    alt='Imagem do serviço'
+                    style={{
+                      width: 'clamp(2.5rem, 2rem + 2.5vw, 5rem)',
+                      height: 'clamp(2.5rem, 2rem + 2.5vw, 5rem)',
+                      alignSelf: 'center',
+                      justifySelf: 'center',
+                    }}
+                    className={classNames({
+                      [Style.imagem]: true,
+                      ['indiceImagem']: true,
+                    })} />
+                </div>
+              </SwiperSlide>
+            )
+          })
+        }
+      </Swiper>
+
+
+    </div>
+  )
+};
+
+export default Arcodeon;
