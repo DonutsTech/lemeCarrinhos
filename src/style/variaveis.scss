@@ -21,9 +21,8 @@ $titulo-desk: 32px;
 $texto-desk: 24px;
 
 
-
-$titulo-1: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
-$titulo-2: clamp(1.125rem, 0.8654rem + 1.1538vw, 2.25rem);
+$titulo-1: clamp(1.5rem, 1.2rem + 1.5vw, 3rem);
+$titulo-2: clamp(1.25rem, 1.1rem + 0.75vw, 2rem);
 $titulo-3: clamp(1rem, 0.7692rem + 1.0256vw, 2rem);
 
 $texto-1: clamp(0.875rem, 0.7rem + 0.875vw, 1.75rem);
