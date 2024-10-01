@@ -12,8 +12,15 @@
 
 
   .mySwiper {
-    height: 80%;
+    height: auto;
+    min-height: 80%;
     width: 100%;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+
 
     .acordeonSlide {
       width: 100%;
@@ -34,8 +41,8 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
-        text-align: right;
+        align-items: center;
+        justify-content: flex-start;
         gap: 16px;
         font-family: $family;
 
@@ -44,13 +51,44 @@
           font-weight: 600;
           line-height: 1.5;
           color: $cor-2-dark;
+          text-align: center;
         }
 
-        p {
-          width: 80%;
-          font-size: $texto-1;
-          line-height: 1.3;
+        h4 {
+          font-size: $titulo-3;
+          font-weight: 600;
+          line-height: 1.5;
           color: $cor-2-dark;
+          text-align: center;
+        }
+        .capacidade { 
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          .comp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            span {
+              font-size: 16px;
+              font-weight: 500;
+              color: $cor-principal-dark;
+            }
+          }
+        }
+        .descricao { 
+          width: 80%;
+          min-width: 300px;
+          margin: 16px auto;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.5;
+          color: $cor-principal-dark;
+          text-align: left;
         }
       }
 
