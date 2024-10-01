@@ -3,6 +3,7 @@
 .produto {
   width: 100%;
   height: auto;
+  margin: 48px 0;
 
   .produtoBox {
     width: 100%;
@@ -10,8 +11,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // padding: 16px;
     gap: 24px;
+    margin-bottom: 48px;
 
     .imagemProduto {
       width: auto;
@@ -61,7 +62,7 @@
         outline: none;
         border-radius: 8px;
         box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
-
+        // margin-bottom: 48px;
         .logo {
           width: 24px;
           height: 24px;
@@ -81,6 +82,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      margin-bottom: 56px;
 
       .boxTextos {
         align-items: center;
@@ -112,21 +114,23 @@
 
   .acordeon {
     width: 100%;
-    height: 0px;
+    height: auto;
     background-image: linear-gradient(112.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%, rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%, rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%, rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%, rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%, rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%, rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%), linear-gradient(157.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%, rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%, rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%, rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%, rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%, rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%, rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%), linear-gradient(135deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%, rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%, rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%, rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%, rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%, rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%, rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%), linear-gradient(90deg, rgb(195, 195, 195), rgb(228, 228, 228));
     background-blend-mode: overlay, overlay, overlay, normal;
-    z-index: 1;
     position: relative;
     animation: in 500ms linear forwards;
-    margin: 40px 0;
+    margin: 32px 0;
 
     .acordeonContain {
       width: 100%;
-      height: 100vh;
-      padding: 48px 0;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      min-height: 100vh;
+      padding: 32px 0;
     }
-
-
 
 
     .detailUp {
@@ -153,6 +157,10 @@
       z-index: 2;
       animation-delay: 2s;
       animation: fadeIn 1s linear forwards;
+    }
+
+    @media screen and (max-width: $mobile) {
+      margin: 96px 0;
     }
   }
 }
