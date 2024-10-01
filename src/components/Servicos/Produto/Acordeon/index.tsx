@@ -9,6 +9,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
+import icon from './capacity.svg';
 
 import Style from './Arcodeon.module.scss';
 import './swiper.scss';
@@ -43,9 +44,16 @@ const Arcodeon = ({ prop }: Props) => {
                   <Image src={elemento.imagem} width={280} height={280} alt='Imagem do serviço' className={Style.imagem} />
                   <div className={Style.boxTextos}>
                     <h3>{elemento.titulo}</h3>
-                    <p>
-                      {elemento.texto}
-                    </p>
+                    <h4> Detalhes: </h4>
+                    <div className={Style.capacidade}>
+                      {elemento.capacidade?.map((el, index) => (
+                        <div key={index} className={Style.comp}>
+                          <Image src={icon} width={20} height={20} alt='Engrenagem icon' className={Style.capacidadeIcon} />
+                          <span>{el}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <p className={Style.descricao}>{elemento.descricao}</p>
                   </div>
                 </div>
               </SwiperSlide>
