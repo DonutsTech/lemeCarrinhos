@@ -2,7 +2,8 @@ import { StaticImageData } from "next/image";
 
 export interface IProduto { 
   titulo: string,
-  texto: string,
+  capacidade?: Array<string>,
+  descricao?: string,
   imagem: StaticImageData,
   id: string,
 }
