@@ -2,7 +2,7 @@
 
 import classnames from 'classnames';
 import Style from './Contatos.module.scss';
-import icon from './imagens/carrinho.svg';
+import icon from '@public/assets/imagensContatos/carrinho.svg';
 import Image from 'next/image';
 
 
