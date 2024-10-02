@@ -94,7 +94,7 @@ const Contatos = () => {
           </button>
         </form>
         <div className={Style.redes}>
-          <p className={Style.callAction}>Transforme seus carrinhos de supermercado com a Leme Reformas! Qualidade e pontualidade na manutenção e comércio de carrinhos novos e usados. Solicite seu orçamento agora e garanta carrinhos como novos!</p>
+          <p className={Style.callAction}>Transforme seus carrinhos de supermercado com a Leme Reformas! Qualidade e pontualidade na manutenção e comércio de carrinhos novos e usados. <br />Solicite seu orçamento agora e garanta carrinhos como novos!</p>
 
           <div className={Style.redesContatos}>
 

@@ -37,7 +37,6 @@ const Produto = ({ imagem, invertido = false, titulo, texto, acordeon}: Props) =
           <button className={Style.btnProdutos}
             onClick={() => {
               setOpen(!open)
-              console.log("Clicou :", open)
             }}
           >
             <Image src={logo} alt='logo' className={Style.logo} />

@@ -1,0 +1,66 @@
+@import 'variaveis';
+
+
+.footer {
+  width: 100%;
+  height: auto;
+  min-height: 64px;
+  background-color: $cor-dark-2;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 16px;
+  padding: 16px;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 102px;
+  }
+
+
+  .footerText {
+    width: 100%;
+    min-width: 300px;
+    font-family: $family;
+    color: $cor-white;
+    font-weight: 400;
+    font-size: 14px;
+    flex-basis: 50%;
+  }
+
+  .donuts {
+    width: 100%;
+    min-width: 300px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-basis: 30%;
+
+
+    .donutsText {
+      font-family: $family;
+      color: $cor-white;
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    a {
+
+      .donutsImg {
+        width: auto;
+        height: 48px;
+        object-fit: cover;
+
+        @media (max-width: $mobile) {
+          width: auto;
+          height: 32px;
+        }
+      }
+    }
+  }
+}

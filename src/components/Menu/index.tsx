@@ -47,7 +47,7 @@ const Menu = () => {
               </Link>
             </li>
             <li className={Style.menuLink}>
-              <Link className={Style.menuLink} href="">
+              <Link className={Style.menuLink} href="#contato">
                 Contato
               </Link>
             </li>
@@ -104,7 +104,7 @@ const Menu = () => {
               </Link>
             </li>
             <li>
-              <Link className={Style.menuLink} href="">
+              <Link className={Style.menuLink} href="#contato">
                 Contato
               </Link>
             </li>

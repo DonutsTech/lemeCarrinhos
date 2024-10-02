@@ -30,21 +30,6 @@
       z-index: 0;
     }
 
-    .tituloClientes {
-      width: 80%;
-      text-align: center;
-      font-family: $family;
-      font-size: $titulo-2;
-      color: $cor-white;
-      font-weight: 600;
-      text-transform: uppercase;
-      line-height: 1.5;
-      z-index: 1;
-      filter: drop-shadow(0 0 15px $cor-principal);
-      position: absolute;
-      top: 30%;
-    }
-
     .detalhe {
       width: 100%;
       height: 100%;
@@ -91,36 +76,64 @@
       }
     }
 
-    .displayClientes {
-      width: 90%;
-      min-width: 300px;
-      display: flex;
-      flex-flow: row wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      z-index: 2;
+    .clienteBox {
+      width: 100%;
+      height: 100%;
+      z-index: 1;
       position: absolute;
-      top: 50%;
-      left: 5%;
-      padding: 24px;
+      top:  clamp(-9.375rem, -11.25rem + 9.375vw, 0rem);
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
 
-
-      .clienteLink {
-        width: 96px;
-        height: 96px;
-        background-color: $cor-white;
-        border-radius: 16px;
-        box-shadow: 10px 10px 15px -5px $cor-principal;
-        background-repeat: no-repeat;
-        background-position: center center;
+      .tituloClientes {
+        width: 80%;
+        text-align: center;
+        font-family: $family;
+        font-size: $titulo-2;
+        color: $cor-white;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 1.5;
+        z-index: 1;
+        filter: drop-shadow(0 0 15px $cor-principal);
+        position: absolute;
+        top: 30%;
       }
 
-      .clienteLink:hover {
-        scale: 0.9;
-        box-shadow: none;
-        filter: brightness(1.3);
-        transition: all 200ms ease-in-out;
+      .displayClientes {
+        width: 90%;
+        min-width: 300px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        padding: 24px;
+
+
+        .clienteLink {
+          width: 96px;
+          height: 96px;
+          background-color: $cor-white;
+          border-radius: 16px;
+          box-shadow: 10px 10px 15px -5px $cor-principal;
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+
+        .clienteLink:hover {
+          scale: 0.9;
+          box-shadow: none;
+          filter: brightness(1.3);
+          transition: all 200ms ease-in-out;
+        }
       }
     }
   }
