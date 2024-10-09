@@ -166,18 +166,12 @@
 }
 
 .acordeoff {
-  display: none;
   animation: out 500ms linear forwards;
 
   .acordeonContain {
     display: none;
-
-    .imagens {
-      display: none;
-    }
   }
 }
-
 
 @keyframes in {
   to {
@@ -187,6 +181,11 @@
 }
 
 @keyframes out {
+  from {
+    min-height: 700px;
+    height: auto;
+  }
+
   to {
     min-height: 0px;
     height: 0px;

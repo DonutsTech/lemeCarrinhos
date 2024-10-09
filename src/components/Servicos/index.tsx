@@ -4,9 +4,6 @@ import Style from './Servicos.module.scss';
 import { IProduto } from '@/types/produto';
 import { v4 as uuidv4 } from 'uuid';
 
-//
-
-
 // Produtos:
 //Carrinhos:
 import carrinho from './imagens/carrinhosDeSupermercado.png';
