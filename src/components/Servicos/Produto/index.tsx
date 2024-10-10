@@ -22,6 +22,13 @@ const Produto = ({ imagem, invertido = false, titulo, texto, acordeon}: Props) =
 
   const [open, setOpen] = useState<boolean>(false);
 
+  const scrollDown = (pixels: number) => {
+    window.scrollBy({
+        top: pixels,  // quantidade de pixels para descer
+        behavior: 'smooth'  // define a animação do scroll como suave
+    });
+  }
+
   return (
     <div className={Style.produto}>
       <div className={classNames({
@@ -37,6 +44,7 @@ const Produto = ({ imagem, invertido = false, titulo, texto, acordeon}: Props) =
           <button className={Style.btnProdutos}
             onClick={() => {
               setOpen(!open)
+              scrollDown(!open ? 300 : -300)
             }}
           >
             <Image src={logo} alt='logo' className={Style.logo} />

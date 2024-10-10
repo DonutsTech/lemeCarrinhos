@@ -25,6 +25,8 @@ interface Props {
 const Arcodeon = ({ prop }: Props) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<string | SwiperClass | null | undefined>(null);
 
+  console.log(prop.length)
+
 
   return (
     <div className={Style.acordeon}>
@@ -61,55 +63,57 @@ const Arcodeon = ({ prop }: Props) => {
           })
         }
       </Swiper>
-      <Swiper
-        onSwiper={setThumbsSwiper}
-        spaceBetween={10}
-        slidesPerView={prop.length}
-        freeMode={true}
-        watchSlidesProgress={true}
-        modules={[FreeMode, Navigation, Thumbs]}
-        className={classNames({
-          [Style.indexed]: true,
-          ['indice']: true,
-        })}
-      >
-        {
-          prop.map((elemento, index) => {
-            return (
-              <SwiperSlide key={index}>
-                <div
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    cursor: "pointer",
-                  }}
-                  className={classNames({
-                    [Style.acordeonSlide]: true,
-                    ['indiceBox']: true,
-                  })}>
-                  <Image src={elemento.imagem}
-                    alt='Imagem do serviço'
-                    style={{
-                      width: 'clamp(2.5rem, 2rem + 2.5vw, 5rem)',
-                      height: 'clamp(2.5rem, 2rem + 2.5vw, 5rem)',
-                      alignSelf: 'center',
-                      justifySelf: 'center',
-                    }}
-                    className={classNames({
-                      [Style.imagem]: true,
-                      ['indiceImagem']: true,
-                    })} />
-                </div>
-              </SwiperSlide>
-            )
-          })
-        }
-      </Swiper>
-
-
+      {
+        prop.length > 1 && (
+          <Swiper
+            onSwiper={setThumbsSwiper}
+            spaceBetween={10}
+            slidesPerView={prop.length}
+            freeMode={true}
+            watchSlidesProgress={true}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className={classNames({
+              [Style.indexed]: true,
+              ['indice']: true,
+            })}
+          >
+            {
+              prop.map((elemento, index) => {
+                return (
+                  <SwiperSlide key={index}>
+                    <div
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        cursor: "pointer",
+                      }}
+                      className={classNames({
+                        [Style.acordeonSlide]: true,
+                        ['indiceBox']: true,
+                      })}>
+                        <Image src={elemento.imagem}
+                          alt='Imagem do serviço'
+                          style={{
+                            width: 'clamp(2.5rem, 2rem + 2.5vw, 5rem)',
+                            height: 'clamp(2.5rem, 2rem + 2.5vw, 5rem)',
+                            alignSelf: 'center',
+                            justifySelf: 'center',
+                          }}
+                          className={classNames({
+                            [Style.imagem]: true,
+                            ['indiceImagem']: true,
+                          })} />
+                    </div>
+                  </SwiperSlide>
+                )
+              })
+            }
+          </Swiper>
+        )
+      }
     </div>
   )
 };
