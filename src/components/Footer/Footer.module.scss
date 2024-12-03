@@ -20,10 +20,36 @@
     padding-bottom: 102px;
   }
 
+  .copy { 
+    width: 60%;
+    min-width: 280px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 8px;
+  }
+
+  .linkLogo {
+    width: auto;
+    height: auto;
+
+    .logo {
+      width: 48px;
+      height: auto;
+
+      &:hover { 
+        rotate: -15deg;
+        transition: all 200ms ease-in-out;
+      }
+    }
+  }
+
 
   .footerText {
-    width: 100%;
-    min-width: 300px;
+    width: 90%;
+    min-width: 240px;
     font-family: $family;
     color: $cor-white;
     font-weight: 400;

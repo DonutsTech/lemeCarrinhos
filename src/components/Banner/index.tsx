@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import Style from './Banner.module.scss';
-import logo from '@public/assets/logocomtexto.svg';
+import logo from '@public/assets/logoOk.svg';
 
 
 const Banner = () => {

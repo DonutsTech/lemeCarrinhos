@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from "react";
 import Style from "./Menu.module.scss";
-import LogoCompleta from '@public/assets/logocomtexto.svg';
+import logoOk from "@public/assets/logoOk.svg";
 import LogoSemTexto from '@public/assets/logosemtexto.svg';
 import Close from '@public/assets/x.svg';
 import classNames from "classnames";
@@ -32,7 +32,7 @@ const Menu = () => {
         <ul className={Style.menu_lista_desk}>
           <li>
             <Link href='' className={Style.menuLinkLogo}>
-              <Image src={LogoCompleta} alt="logo completo" className={Style.logo} />
+              <Image src={logoOk} alt="logo da Leme" className={Style.logo} />
             </Link>
           </li>
           <div className={Style.menuLink_textos}>
@@ -90,7 +90,7 @@ const Menu = () => {
           <ul className={Style.menu_lista_mobile}>
             <li>
               <Link href=''>
-                <Image src={LogoCompleta} alt="logo completo" className={Style.logo_mobile} />
+                <Image src={logoOk} alt="logo completo" className={Style.logo_mobile} />
               </Link>
             </li>
             <li>
