@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/nodemailer": "^6.4.16",
     "carrinhos-leme": "file:",
     "classnames": "^2.5.1",
     "next": "14.2.13",
     "next-videos": "^1.4.1",
+    "nodemailer": "^6.9.15",
     "react": "^18",
     "react-dom": "^18",
     "react-responsive": "^10.0.0",
