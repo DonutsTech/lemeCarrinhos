@@ -9,7 +9,7 @@ const About = () => {
   return (
     <section id="about" aria-label='Sobre a Leme Carrinhos' className={Style.about}>
       <div className={Style.cabeca}>
-        <Image src={logo} alt='Logo da Leme Carrinhos' className={Style.logo} />
+        <Image src={logo} alt='Logo da Leme Carrinhos' className={Style.logo} priority/>
         <h2>Uma história de qualidade e compromisso com a excelência!</h2>
       </div>
       <p>

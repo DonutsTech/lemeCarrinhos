@@ -32,7 +32,7 @@ const MVV = () => {
             <div className={Style.card}>
               <h3 className={Style.titulo}>Nosso Propósito:</h3>
               <div className={Style.img}>
-                <Image src={MissaoIcon} alt='icon de Missão' />
+                <Image src={MissaoIcon} alt='icon de Missão' priority/>
               </div>
               <p className={Style.textoMVV}>
                 Ser a referência em soluções completas para equipamentos de armazenagem e carrinhos,
@@ -45,7 +45,7 @@ const MVV = () => {
             <div className={Style.card}>
               <h3 className={Style.titulo}>Nosso Objetivo:</h3>
               <div className={Style.img}>
-                <Image src={VisaoIcon} alt='icon de Visão' />
+                <Image src={VisaoIcon} alt='icon de Visão' priority/>
               </div>
               <p className={Style.textoMVV}>
                 Tornar-se a empresa líder no mercado de equipamentos de armazenagem e carrinhos,
@@ -58,36 +58,36 @@ const MVV = () => {
             <div className={Style.card}>
               <h3 className={Style.titulo}>Nossos Principios:</h3>
               <div className={Style.img}>
-                <Image src={ValoresIcon} alt='icon de Valores' />
+                <Image src={ValoresIcon} alt='icon de Valores' priority/>
               </div>
               <ul>
                 <li>
                   Qualidade
-                  <Image src={Diamante} className={Style.diamante} alt='Icon deDiamante' />
+                  <Image src={Diamante} className={Style.diamante} alt='Icon deDiamante' priority/>
                 </li>
                 <li>
                   Pontualidade
-                  <Image src={Diamante} className={Style.diamante} alt='Icon deDiamante' />
+                  <Image src={Diamante} className={Style.diamante} alt='Icon deDiamante' priority/>
                 </li>
                 <li>
                   Sustentabilidade
-                  <Image src={Diamante} className={Style.diamante} alt='Icon deDiamante' />
+                  <Image src={Diamante} className={Style.diamante} alt='Icon deDiamante' priority/>
                 </li>
                 <li>
                   Inovação
-                  <Image src={Diamante} className={Style.diamante} alt='Icon deDiamante' />
+                  <Image src={Diamante} className={Style.diamante} alt='Icon deDiamante' priority/>
                 </li>
                 <li>
                   Ética
-                  <Image src={Diamante} className={Style.diamante} alt='Icon deDiamante' />
+                  <Image src={Diamante} className={Style.diamante} alt='Icon deDiamante' priority/>
                 </li>
                 <li>
                   Responsibilidade social
-                  <Image src={Diamante} className={Style.diamante} alt='Icon deDiamante' />
+                  <Image src={Diamante} className={Style.diamante} alt='Icon deDiamante' priority/>
                 </li>
                 <li>
                   Trabalho em equipe
-                  <Image src={Diamante} className={Style.diamante} alt='Icon deDiamante' />
+                  <Image src={Diamante} className={Style.diamante} alt='Icon deDiamante' priority/>
                 </li>
               </ul>
             </div>
@@ -98,7 +98,7 @@ const MVV = () => {
           <div className={Style.card} >
             <h3 className={Style.titulo} >Nosso Popósito:</h3>
             <div className={Style.img}>
-              <Image src={MissaoIcon} alt="icon de Missão" />
+              <Image src={MissaoIcon} alt="icon de Missão" priority/>
             </div>
             <p className={Style.textoMVV}>
               Ser a referência em soluções completas para equipamentos de armazenagem e carrinhos,
@@ -109,7 +109,7 @@ const MVV = () => {
           <div className={Style.card}>
             <h3 className={Style.titulo}>Nosso Objetivo:</h3>
             <div className={Style.img}>
-              <Image src={VisaoIcon} alt='Icone de Visão' />
+              <Image src={VisaoIcon} alt='Icone de Visão' priority/>
             </div>
             <p className={Style.textoMVV}>
               Tornar-se a empresa líder no mercado de equipamentos de armazenagem e carrinhos,
@@ -120,36 +120,36 @@ const MVV = () => {
           <div className={Style.card}>
             <h3 className={Style.titulo}>Nossos Principios:</h3>
             <div className={Style.img}>
-              <Image src={ValoresIcon} alt='Icone de Visão' />
+              <Image src={ValoresIcon} alt='Icone de Visão' priority/>
             </div>
             <ul>
               <li>
                 Qualidade
-                <Image className={Style.diamante} src={Diamante} alt='icone de Diamante' />
+                <Image className={Style.diamante} src={Diamante} alt='icone de Diamante' priority/>
               </li>
               <li>
                 Pontualidade
-                <Image className={Style.diamante} src={Diamante} alt='icone de Diamante' />
+                <Image className={Style.diamante} src={Diamante} alt='icone de Diamante' priority/>
               </li>
               <li>
                 Sustentabilidade
-                <Image className={Style.diamante} src={Diamante} alt='icone de Diamante' />
+                <Image className={Style.diamante} src={Diamante} alt='icone de Diamante' priority/>
               </li>
               <li>
                 Inovação
-                <Image className={Style.diamante} src={Diamante} alt='icone de Diamante' />
+                <Image className={Style.diamante} src={Diamante} alt='icone de Diamante' priority/>
               </li>
               <li>
                 Ética
-                <Image className={Style.diamante} src={Diamante} alt='icone de Diamante' />
+                <Image className={Style.diamante} src={Diamante} alt='icone de Diamante' priority/>
               </li>
               <li>
                 Responsabilidade social
-                <Image className={Style.diamante} src={Diamante} alt='icone de Diamante' />
+                <Image className={Style.diamante} src={Diamante} alt='icone de Diamante' priority/>
               </li>
               <li>
                 Trabalho em equipe
-                <Image className={Style.diamante} src={Diamante} alt='icone de Diamante' />
+                <Image className={Style.diamante} src={Diamante} alt='icone de Diamante' priority/>
               </li>
             </ul>
           </div>
