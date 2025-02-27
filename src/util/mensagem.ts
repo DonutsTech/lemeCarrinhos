@@ -12,10 +12,10 @@ export function mensagemEnviada(form: FormConjunto) {
     CPNJ:  ${form.cnpj === undefined || form.cnpj.trim() === '' ? '----- Contato Não informou ----- ' : form.cnpj }
 
     Endereço de Cliente:
-      Rua: ${form.endereco === undefined || form.endereco === null ? '----- Contato Não informou ----- ' : `${form.endereco.logradouro}` }
-      Bairro: ${form.endereco === undefined || form.endereco === null ? '----- Contato Não informou ----- ' : form.endereco.bairro }
-      Cidade: ${form.endereco === undefined || form.endereco === null ? '----- Contato Não informou ----- ' : `${form.endereco.localidade} - ${form.endereco.uf}` }
-      CEP: ${form.endereco === undefined || form.endereco === null ? '----- Contato Não informou ----- ' : form.cep }
+     -  Rua: ${form.endereco === undefined || form.endereco === null ? '----- Contato Não informou ----- ' : `${form.endereco.logradouro}` }
+     -  Bairro: ${form.endereco === undefined || form.endereco === null ? '----- Contato Não informou ----- ' : form.endereco.bairro }
+     -  Cidade: ${form.endereco === undefined || form.endereco === null ? '----- Contato Não informou ----- ' : `${form.endereco.localidade} - ${form.endereco.uf}` }
+     -  CEP: ${form.endereco === undefined || form.endereco === null ? '----- Contato Não informou ----- ' : form.cep }
 
     Dados do CNPJ:
       - Razão Social:  ${form.cnpjInfo === undefined || form.cnpjInfo === null ? '----- Contato Não informou ----- ' : form.cnpjInfo.company.name }
