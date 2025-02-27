@@ -223,6 +223,17 @@ const Contatos = () => {
               </a>
             </div>
 
+            
+            <div className={Style.contatoItem}>
+              <a href="https://api.whatsapp.com/send/?phone=5511962190522&text=Ol%C3%A1%20venho%20do%20seu%20site,%20e%20gostaria%20de%20saber%20mais!" target='blank' rel='noreferrer'>
+                <div className={classnames({
+                  [Style.iconLink]: true,
+                  ['wpp']: true,
+                })} />
+                <p className={Style.linkTexto}>11 9.6219-0522</p>
+              </a>
+            </div>
+
             <div className={Style.contatoItem}>
               <a href='https://www.facebook.com/LemeReformaeManutencao/' target='blank' rel='noreferrer'>
                 <div className={classnames({

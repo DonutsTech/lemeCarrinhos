@@ -7,6 +7,7 @@ import Close from '@public/assets/x.svg';
 import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
+import wpp from "@public/assets/imagensContatos/whatsapp.svg";
 
 const Menu = () => {
 
@@ -49,6 +50,15 @@ const Menu = () => {
             <li className={Style.menuLink}>
               <Link className={Style.menuLink} href="#contato">
                 Contato
+              </Link>
+            </li>
+            <li className={Style.menuLink}>
+              <Link className={Style.menuLink} 
+                href="https://api.whatsapp.com/send/?phone=5511962190522&text=Ol%C3%A1%20venho%20do%20seu%20site,%20e%20gostaria%20de%20saber%20mais!" 
+                target="_blank" 
+                rel='noreferrer'
+                >
+                <Image src={wpp} alt="WhatsApp" className={Style.wpp} priority />
               </Link>
             </li>
           </div>
@@ -108,6 +118,15 @@ const Menu = () => {
             <li>
               <Link className={Style.menuLink} href="#contato">
                 Contato
+              </Link>
+            </li>
+            <li className={Style.menuLink}>
+              <Link className={Style.menuLink} 
+                href="https://api.whatsapp.com/send/?phone=5511962190522&text=Ol%C3%A1%20venho%20do%20seu%20site,%20e%20gostaria%20de%20saber%20mais!" 
+                target="_blank" 
+                rel='noreferrer'
+                >
+                <Image src={wpp} alt="WhatsApp" className={Style.wpp} priority />
               </Link>
             </li>
           </ul>

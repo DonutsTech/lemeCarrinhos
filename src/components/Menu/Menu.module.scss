@@ -58,6 +58,16 @@
             font-family: $family;
             font-size: 20px;
 
+            .wpp {
+              width: 32px;
+              height: auto;
+
+              &:hover {
+                transform: scale(1.1);
+                rotate: -5deg;
+              }
+            }
+
             &:hover {
               padding-bottom: 4px;
               color: $cor-principal-clara;
@@ -168,6 +178,16 @@
             color: $cor-white;
             font-family: $family;
             font-size: 20px;
+
+            .wpp {
+              width: 32px;
+              height: auto;
+
+              &:hover {
+                transform: scale(1.1);
+                rotate: -5deg;
+              }
+            }
           }
         }
 
