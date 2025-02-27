@@ -31,8 +31,8 @@ const Menu = () => {
       <nav className={Style.menu_desk} >
         <ul className={Style.menu_lista_desk}>
           <li>
-            <Link href='' className={Style.menuLinkLogo}>
-              <Image src={logoOk} alt="logo da Leme" className={Style.logo} />
+            <Link href='/' className={Style.menuLinkLogo}>
+              <Image src={logoOk} alt="logo da Leme" className={Style.logo} priority />
             </Link>
           </li>
           <div className={Style.menuLink_textos}>
@@ -42,7 +42,7 @@ const Menu = () => {
               </Link>
             </li>
             <li className={Style.menuLink}>
-              <Link className={Style.menuLink} href="#servicos" >
+              <Link className={Style.menuLink} href="#servicos">
                 Serviços
               </Link>
             </li>
@@ -70,7 +70,7 @@ const Menu = () => {
             setShowMenu(!showMenu);
           }}
         >
-          <Image src={LogoSemTexto} alt="logo sem texto" className={Style.logo_mobile} />
+          <Image src={LogoSemTexto} alt="logo sem texto" className={Style.logo_mobile} priority/>
         </button>
         <div className={classNames({
           [Style.container_menu_mobile]: true,
@@ -84,13 +84,15 @@ const Menu = () => {
               setShowMenu(!showMenu);
             }}
           >
-            <Image src={Close} alt="X" className={Style.close_mobile} />
+            <Image src={Close} alt="X" className={Style.close_mobile} priority/>
           </button>
 
           <ul className={Style.menu_lista_mobile}>
             <li>
-              <Link href=''>
-                <Image src={logoOk} alt="logo completo" className={Style.logo_mobile} />
+              <Link href='/'>
+                <Image src={logoOk} alt="logo completo" className={Style.logo_mobile} priority onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}/>
               </Link>
             </li>
             <li>
