@@ -20,8 +20,8 @@ const Banner = () => {
         Seu navegador não suporta vídeos.
       </video>
     <div className={Style.overlay} />
-    <div className={Style.content}> 
-      <Image src={logo} alt='Logo da Leme Carrinhos' className={Style.logo} />
+    <div className={Style.content}>
+      <Image src={logo} alt='Logo da Leme Carrinhos' className={Style.logo} priority/>
       <p >
       Carrinhos, cestos e acessórios que transformam seu negócio e não te deixa na mão!
       </p>
