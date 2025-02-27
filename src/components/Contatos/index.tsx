@@ -4,18 +4,105 @@ import classnames from 'classnames';
 import Style from './Contatos.module.scss';
 import icon from '@public/assets/imagensContatos/carrinho.svg';
 import Image from 'next/image';
-
-
 import './contatos.scss';
+import { FormEvent, useCallback, useEffect, useState } from 'react';
+import { Form, FormConjunto } from '@/types/form';
+import { cep, cnpj, phone } from '@/util/mask';
+import { validateMensagem } from '@/util/validacao';
+import { mensagemEnviada } from '@/util/mensagem';
 
 const Contatos = () => {
+  const [form, setForm] = useState<Form>({} as Form)
+  const [mensagem, setMensagem] = useState<string>('')
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (mensagem) {
+        setMensagem('')
+      }
+    }, 10000);
+  }, [mensagem]);
+
+  const handleFormChange = useCallback((e: FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const nome = e.currentTarget.name
+
+    if (nome === 'telefone') {
+      e = phone(e)
+    }
+
+    if (nome === 'cep') {
+      e = cep(e)
+    }
+
+    if (nome === 'cnpj') {
+      e = cnpj(e)
+    }
+
+    setForm({
+      ...form,
+      [nome]: e.currentTarget.value
+    })
+  }, [form]);
+
+  const enviarDados = async (formDados: FormConjunto) => {
+    try {
+      const response = await fetch('/api/formulario', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          to: '',
+          subject: 'Mensagem Recebida pelo site',
+          text: mensagemEnviada(formDados)
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.mensagem === 'Mensagem não enviada. Contate-nos por telefone.') {
+        throw new Error('Mensagem não enviada. Contate-nos por telefone.')
+      }
+
+      if (!(data.mensagem === 'Mensagem não enviada. Contate-nos por telefone.')) {
+        setForm({} as Form)
+        setMensagem(data.mensagem)
+      }
+
+    } catch (error) {
+      console.error(error)
+      setMensagem('Mensagem não enviada. Contate-nos por telefone.')
+    }
+  }
+
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const FormData: Form = {
+      nome: (e.currentTarget.elements.namedItem('nome') as HTMLInputElement).value,
+      email: (e.currentTarget.elements.namedItem('email') as HTMLInputElement).value,
+      telefone: (e.currentTarget.elements.namedItem('telefone') as HTMLInputElement).value,
+      cep: (e.currentTarget.elements.namedItem('cep') as HTMLInputElement).value,
+      cnpj: (e.currentTarget.elements.namedItem('cnpj') as HTMLInputElement).value,
+      mensagem: (e.currentTarget.elements.namedItem('mensagem') as HTMLTextAreaElement).value,
+    };
+
+    const mensagem = await validateMensagem(FormData)
+
+    if (typeof mensagem === 'string') {
+      setMensagem(mensagem)
+    } else {
+      enviarDados(mensagem)
+    }
+
+  };
 
   return (
     <section id='contato' className={Style.contato}>
       <h3 className={Style.titulo}>Entre em contato e faça o seu Orçamento!</h3>
 
       <div className={Style.contatoContainer}>
-        <form action="submit" className={Style.form}>
+        <form action="submit" className={Style.form} onSubmit={onSubmit}>
           <label htmlFor='nome' />
           <input
             type='text'
@@ -27,6 +114,8 @@ const Contatos = () => {
               [Style.input]: true,
               [Style.inputNome]: true,
             })}
+            onChange={handleFormChange}
+            value={form.nome === undefined ? '' : form.nome}
           />
           <label htmlFor='telefone' />
           <input
@@ -34,11 +123,14 @@ const Contatos = () => {
             name='telefone'
             id='telefone'
             placeholder="Telefone*"
+            maxLength={15}
             required={true}
             className={classnames({
               [Style.input]: true,
               [Style.inputTelefone]: true,
             })}
+            onChange={handleFormChange}
+            value={form.telefone === undefined ? '' : form.telefone}
           />
           <label htmlFor='email' />
           <input
@@ -51,6 +143,8 @@ const Contatos = () => {
               [Style.input]: true,
               [Style.inputEmail]: true,
             })}
+            onChange={handleFormChange}
+            value={form.email === undefined ? '' : form.email}
           />
           <label htmlFor='cep' />
           <input
@@ -63,6 +157,8 @@ const Contatos = () => {
               [Style.input]: true,
               [Style.inputCep]: true,
             })}
+            onChange={handleFormChange}
+            value={form.cep === undefined ? '' : form.cep}
           />
           <label htmlFor='cnpj' />
           <input
@@ -74,6 +170,8 @@ const Contatos = () => {
               [Style.input]: true,
               [Style.inputCnpj]: true,
             })}
+            onChange={handleFormChange}
+            value={form.cnpj === undefined ? '' : form.cnpj}
           />
           <label htmlFor='mensagem' />
           <textarea
@@ -81,7 +179,14 @@ const Contatos = () => {
             id='mensagem'
             placeholder='Digite aqui a sua Mensagem...'
             className={Style.inputMensagem}
+            onChange={handleFormChange}
+            value={form.mensagem === undefined ? '' : form.mensagem}
           />
+           {
+            !(mensagem === '') && (
+              <p>{mensagem}</p>
+            )
+          }
           <label htmlFor="submit" />
           <button
             type='submit'
@@ -89,7 +194,7 @@ const Contatos = () => {
             id='submit'
             className={Style.botaoSubmit}
           >
-            <Image src={icon} width={20} height={20} alt='Enviar' className={Style.botaoSubmitIcon} />
+            <Image src={icon} width={20} height={20} alt='Enviar' className={Style.botaoSubmitIcon} priority/>
             Enviar
           </button>
         </form>
@@ -109,12 +214,12 @@ const Contatos = () => {
             </div>
 
             <div className={Style.contatoItem}>
-              <a href='mailto:contato@lemecarrinhos.com.br' target='blank' rel='noreferrer'>
+              <a href='mailto:lememanutencao.reformas@gmail.com' target='blank' rel='noreferrer'>
                 <div className={classnames({
                   [Style.iconLink]: true,
                   ['email']: true,
                 })} />
-                <p className={Style.linkTexto}>contato@lemecarrinhos.com.br</p>
+                <p className={Style.linkTexto}>lememanutencao.reformas@gmail.com</p>
               </a>
             </div>
 
@@ -124,17 +229,17 @@ const Contatos = () => {
                   [Style.iconLink]: true,
                   ['facebook']: true,
                 })} />
-                <p className={Style.linkTexto}>Leme Reforma</p>
+                <p className={Style.linkTexto}>Leme Carrinhos</p>
               </a>
             </div>
 
             <div className={Style.contatoItem}>
-              <a href='https://www.instagram.com' target='blank' rel='noreferrer'>
+              <a href='https://www.instagram.com/leme.carrinhos/' target='blank' rel='noreferrer'>
                 <div className={classnames({
                   [Style.iconLink]: true,
                   ['instagram']: true,
                 })} />
-                <p className={Style.linkTexto}>@carrinhosleme</p>
+                <p className={Style.linkTexto}>@leme.carrinhos</p>
               </a>
             </div>
 
