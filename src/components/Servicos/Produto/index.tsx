@@ -35,7 +35,7 @@ const Produto = ({ imagem, invertido = false, titulo, texto, acordeon}: Props) =
         [Style.produtoBox]: true,
         [Style.invertido]: invertido,
       })} >
-        <Image src={imagem} alt='Imagem do serviço' className={Style.imagemProduto} />
+        <Image src={imagem} alt='Imagem do serviço' className={Style.imagemProduto} priority/>
         <div className={Style.boxTextos}>
           <h3>{titulo}</h3>
           <p>
@@ -47,7 +47,7 @@ const Produto = ({ imagem, invertido = false, titulo, texto, acordeon}: Props) =
               scrollDown(!open ? 300 : -300)
             }}
           >
-            <Image src={logo} alt='logo' className={Style.logo} />
+            <Image src={logo} alt='logo' className={Style.logo} priority/>
             confira
           </button>
         </div>

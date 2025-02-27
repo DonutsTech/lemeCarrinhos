@@ -25,9 +25,6 @@ interface Props {
 const Arcodeon = ({ prop }: Props) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<string | SwiperClass | null | undefined>(null);
 
-  console.log(prop.length)
-
-
   return (
     <div className={Style.acordeon}>
       <Swiper
@@ -105,7 +102,9 @@ const Arcodeon = ({ prop }: Props) => {
                           className={classNames({
                             [Style.imagem]: true,
                             ['indiceImagem']: true,
-                          })} />
+                          })}
+                          priority
+                        />
                     </div>
                   </SwiperSlide>
                 )
