@@ -157,7 +157,7 @@ html {
   overflow-x: hidden;
 }
 
-header { 
+header {
   width: 100%;
   height: 100%;
 }
@@ -214,4 +214,9 @@ main {
 
 *::-webkit-scrollbar-thumb:active {
   background-color: #166370;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 68px;
 }
