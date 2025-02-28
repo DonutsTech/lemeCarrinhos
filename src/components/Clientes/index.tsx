@@ -36,6 +36,7 @@ const Clientes = () => {
             controls={false}
             preload='auto'
             className={Style.video}
+            playsInline={true}
           >
             <source src="assets/video/videoCliente.mp4" type='video/mp4' />
           </video>

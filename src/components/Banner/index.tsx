@@ -15,6 +15,7 @@ const Banner = () => {
         controls={false}
         preload="auto"
         className={Style.videoBanner}
+        playsInline={true}
       >
         <source src="assets/video/videoHome.mp4" type='video/mp4'/>
         Seu navegador não suporta vídeos.
