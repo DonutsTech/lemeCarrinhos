@@ -10,6 +10,7 @@ import { Form, FormConjunto } from '@/types/form';
 import { cep, cnpj, phone } from '@/util/mask';
 import { validateMensagem } from '@/util/validacao';
 import { mensagemEnviada } from '@/util/mensagem';
+import { fetchEmail } from '@/lib/fetchEmail';
 
 const Contatos = () => {
   const [form, setForm] = useState<Form>({} as Form)
@@ -46,27 +47,21 @@ const Contatos = () => {
 
   const enviarDados = async (formDados: FormConjunto) => {
     try {
-      const response = await fetch('/api/formulario', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          to: '',
-          subject: 'Mensagem Recebida pelo site',
-          text: mensagemEnviada(formDados)
-        }),
-      });
+      const data = await fetchEmail({
+        name: 'Leme',
+        to: 'lememanutencao.reformas@gmail.com',
+        subject: 'Mensagem Recebida pelo site',
+        text: mensagemEnviada(formDados)
+      })
 
-      const data = await response.json();
 
-      if (data.mensagem === 'Mensagem não enviada. Contate-nos por telefone.') {
+      if (data !== 'Mensagem Recebida Com Sucesso!') {
         throw new Error('Mensagem não enviada. Contate-nos por telefone.')
       }
 
-      if (!(data.mensagem === 'Mensagem não enviada. Contate-nos por telefone.')) {
+      if (data === 'Mensagem Recebida Com Sucesso!') {
         setForm({} as Form)
-        setMensagem(data.mensagem)
+        setMensagem(data)
       }
 
     } catch (error) {
@@ -223,7 +218,7 @@ const Contatos = () => {
               </a>
             </div>
 
-            
+
             <div className={Style.contatoItem}>
               <a href="https://api.whatsapp.com/send/?phone=5511962190522&text=Ol%C3%A1%20venho%20do%20seu%20site,%20e%20gostaria%20de%20saber%20mais!" target='blank' rel='noreferrer'>
                 <div className={classnames({
@@ -255,7 +250,7 @@ const Contatos = () => {
             </div>
 
             <div className={Style.contatoItem}>
-              <a href='https://www.linkedin.com/in/leme-manuten%C3%A7%C3%A3o-e-reformas-76082b72/' target='blank' rel='noreferrer'>
+              <a href='https://www.linkedin.com/company/leme-manuten%C3%A7%C3%A3o-e-reforma-ltda/posts/?feedView=all' target='blank' rel='noreferrer'>
                 <div className={classnames({
                   [Style.iconLink]: true,
                   ['linkedin']: true,
